@@ -38,6 +38,13 @@ div img {
 	flex-flow: row wrap;
 }
 
+.row-2 {
+	display: flex;
+	flex-flow: row wrap;
+	flex-direction: row-reverse;
+	justify-content:flex-end;
+}
+
 /* attribute selector to give some margin between columns and apply styles to flex items */
 
 [class*="col-"] {
@@ -63,13 +70,17 @@ div img {
 	background-color: #b1ff4b;
 }
 
+.col-5 {
+	background-color: #ff0000;
+}
+
 
 
 /* Tablet Landscape Screen Sizes */
 @media only screen and (min-width: 480px) {
 
 	.col-1,
-	.col-2 {
+	.col-2, .col-5 {
 		flex: 1 0 44%;
 	} 
 
@@ -92,12 +103,16 @@ div img {
 		flex: 0 0 44%; /*2 column width*/
 	}
 
-	.col-3 {
+	.col-3{
 		flex: 0 0 68%; /*3 column width*/
 	}
 
 	.col-4 {
 		flex: 0 0 92%; /*4 column width*/
 	}
+	
+	.col-5{
+		flex: 0 0 28%; /*custom width*/
+	} 
 
 }
